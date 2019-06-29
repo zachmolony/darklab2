@@ -1,10 +1,10 @@
 <template>
     <div class="product-item" v-bind:class="{'soldOut':product.soldOut}" v>
+        <img alt="" src="../assets/items/tee_black.png">
         <h1>{{product.title}}</h1>
-        <img v-bind:src="product.url" alt="">
         <div class="details">
             <p>{{product.price}}</p>
-            <button class="add2cart" @click="$emit('addToCart', product.id)">{{ product.soldOut ? "sold out" : "add to cart" }}</button>
+            <button class="add2cart" @click="$emit('addToCart', product.id)">{{ product.soldOut ? "SOLD OUT" : "ADD TO CART" }}</button>
         </div>
     </div>
 </template>
@@ -21,6 +21,14 @@ export default {
     padding: 3vh;
 }
 
+.product-item >  * {
+    display: block;
+    height: auto;
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .soldOut * {
     text-decoration: line-through;
 }
@@ -28,5 +36,14 @@ export default {
 .soldOut > button {
     display: none;
 }
- 
+
+button {
+    color: black;
+    padding: 5px;
+}
+
+.details {
+    width: 43%;
+}
+
 </style>
