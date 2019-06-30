@@ -1,5 +1,6 @@
 <template>
   <div id="Home">
+    <Navbar class="navbar" />
     <Products  v-bind:products="products" v-on:addToCart="addToCart"/>
   </div>
 </template>
@@ -19,21 +20,24 @@ export default {
       products: [
         {
           id: 1,
-          title: "Black Tee",
+          img: 'https://firebasestorage.googleapis.com/v0/b/darklab2037.appspot.com/o/Hoodie_Green.png?alt=media&token=88434e76-11b4-4f12-ae73-a4d1682ddcb8',
+          title: "Skull Hoodie",
           type: 'tees',
           price: 19.99,
           soldOut: false
         },
         {
           id: 2,
-          title: "Ripped Jeans",
+          img: '',
+          title: "Dark Denim",
           type: 'pants',
           price: 49.99,
           soldOut: false
         },
         {
           id: 3,
-          title: "Dark Hat",
+          img: '',
+          title: "Butterfly Hoodie",
           type: 'accessories',
           price: 29.99,
           soldOut: true
@@ -56,7 +60,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style <style lang="scss" scoped>
 
 </style>
