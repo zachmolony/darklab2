@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <img id="background" src="./assets/sky.gif" alt="">
-    <Navbar class="navbar" />
-      <router-view />
+    <router-view />
   </div>
 </template>
 
@@ -10,12 +9,6 @@
   import Navbar from './components/Navbar'
 
   export default {
-    components: {
-      Navbar
-    },
-    created() {
-      //sessionStorage.setItem('firstLoad', true);
-    }
   }
 </script>
 
@@ -27,7 +20,7 @@
     border: 0;
     outline: 0;
     font-family: 'Scheherazade', serif;
-    color: white;
+    color: black;
   }
 
   body {
@@ -43,7 +36,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
     margin: 0 !important;
   }
 
@@ -53,13 +45,7 @@
     height: 100%;
     width: auto;
     z-index: -5;
+    filter: grayscale(1);
+    filter: invert(1);
   }
-
-  .navbar {
-    padding-top: 8vh;
-  }
-
-.showNavbar {
-  display: flex
-}
 </style>

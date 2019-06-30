@@ -1,12 +1,9 @@
 <template>
     <div class="product-item" v-bind:class="{'soldOut':product.soldOut}" v>
-        <img alt="" src="../assets/items/tee_black.png">
+        <img v-bind:src="product.img">
         <div class="info-container">
-            <div class="details">
-                <h1>{{product.title}}</h1>
-                <p>{{product.price}}</p>
-            </div>
-            <button class="add2cart" @click="$emit('addToCart', product.id)">{{ product.soldOut ? "SOLD OUT" : "ADD TO CART" }}</button>
+            <h1>{{product.title}}</h1>
+            <p>{{product.price}}</p>
         </div>
         
     </div>
@@ -42,10 +39,8 @@ button
     width: 35%
     background-color: rgba(255, 0, 0, 0.76)
 
-.details 
-    width: 43%
-
 .info-container 
     display: flex
+    flex-direction: column
 
 </style>
