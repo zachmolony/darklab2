@@ -1,15 +1,17 @@
 <template>
-  <div id="productsPage">
+  <div id="Home">
     <Products  v-bind:products="products" v-on:addToCart="addToCart"/>
   </div>
 </template>
 
 <script>
+import Navbar from '../components/Navbar.vue'
 import Products from '../components/Products.vue'
 
 export default {
-  name: 'productsPage',
+  name: 'Home',
   components: {
+    Navbar,
     Products
   },
   data() {
@@ -55,12 +57,6 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+
 </style>
