@@ -48,6 +48,9 @@ export default {
   methods: {
     addToCart(id){
       console.log(id)
+    },
+    goTodetail(prodId) {
+      this.$router.push({name:'details',params:{Pid:proId}})
     }
   },
   /*

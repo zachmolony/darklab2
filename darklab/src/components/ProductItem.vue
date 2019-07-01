@@ -1,5 +1,5 @@
 <template>
-    <div class="product-item" v-bind:class="{'soldOut':product.soldOut}">
+    <div class="product-item" v-bind:class="{'soldOut':product.soldOut}" @click="goToProductPage(product.id)" >
         <img v-bind:src="product.img">
         <div class="info-container">
             <h1>{{product.title}}</h1>
@@ -12,6 +12,11 @@
 export default {
     name: "ProductItem",
     props: ["product"],
+    methods: {
+        goToProductPage(productId) {
+            this.$router.push({name:'product',params:{Pid:productId}})
+        }
+    }
 }
 </script>
 

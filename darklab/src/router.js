@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Enter from './views/Enter.vue'
 
+
 Vue.use(Router)
 
 export default new Router({
@@ -24,6 +25,11 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/Cart.vue')
+    },
+    {
+      path: '/product/:Pid',
+      name: 'product',
+      component: () => import(/* webpackChunkName: "about" */ './views/Product.vue')
     },
     {
       path: '/about',
