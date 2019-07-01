@@ -23,15 +23,15 @@ export default {
           img: 'https://firebasestorage.googleapis.com/v0/b/darklab2037.appspot.com/o/Hoodie_Green.png?alt=media&token=88434e76-11b4-4f12-ae73-a4d1682ddcb8',
           title: "Skull Hoodie",
           type: 'tees',
-          price: 19.99,
+          price: '£xx.xx',
           soldOut: false
         },
         {
           id: 2,
-          img: '',
+          img: 'https://firebasestorage.googleapis.com/v0/b/darklab2037.appspot.com/o/Jeans_1.png?alt=media&token=a7620aa5-c312-433f-bf91-1ea04cbe79da',
           title: "Dark Denim",
           type: 'pants',
-          price: 49.99,
+          price: '£xx.xx',
           soldOut: false
         },
         {
@@ -39,7 +39,7 @@ export default {
           img: '',
           title: "Butterfly Hoodie",
           type: 'accessories',
-          price: 29.99,
+          price: '£xx.xx',
           soldOut: true
         }
       ]

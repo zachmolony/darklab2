@@ -21,7 +21,7 @@ export default {
 <style scoped>
   #header {
     position: absolute;
-    padding-top: 35vh;
+    padding-top: 28vh;
     left: 0;
     right: 0;
     margin-left: auto;

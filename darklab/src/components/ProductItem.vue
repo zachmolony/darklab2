@@ -1,11 +1,10 @@
 <template>
-    <div class="product-item" v-bind:class="{'soldOut':product.soldOut}" v>
+    <div class="product-item" v-bind:class="{'soldOut':product.soldOut}">
         <img v-bind:src="product.img">
         <div class="info-container">
             <h1>{{product.title}}</h1>
             <p>{{product.price}}</p>
-        </div>
-        
+        </div> 
     </div>
 </template>
 
@@ -23,7 +22,8 @@ export default {
 .product-item >  *
     display: block
     height: auto
-    width: 60vw
+    width: auto
+    max-height: 230px
     margin-left: auto
     margin-right: auto
 
