@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="Products" v-bind:key="product.id" v-for="product in products">
-            <ProductItem v-bind:product="product" v-on:addToCart="$emit('addToCart', product.id)" />
+            <ProductItem v-bind:product="product" />
         </div>
     </div>
 </template>

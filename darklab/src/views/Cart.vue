@@ -2,7 +2,7 @@
     <div>
         <Navbar class="navbar" />
         <div class="basket">
-          <h1>You have nothing in your cart.</h1>
+          <h1 v-if="basketIsEmpty">You have nothing in your cart.</h1>
         </div>
     </div>
 </template>
@@ -14,6 +14,17 @@ export default {
   name: 'Home',
   components: {
     Navbar
+  },
+  props: ['basket'],
+  data() {
+    return {
+      
+    }
+  },
+  created() {
+    if (basket.length == 0) {
+      let basketIsEmpty = true;
+    }
   }
 }
 </script>

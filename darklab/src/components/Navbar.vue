@@ -14,7 +14,8 @@
 
 <script>
 export default {
-    name: "Navbar"
+    name: "Navbar",
+    props: ['basket']
 }
 </script>
 
