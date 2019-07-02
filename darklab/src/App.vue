@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img id="background" src="./assets/sky.gif" alt="">
-    <router-view />
+    <router-view class="page_content" />
   </div>
 </template>
 
@@ -48,14 +48,16 @@
   #background {
     display: block;
     position: fixed;
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
     z-index: -5;
     filter: grayscale(1);
     filter: invert(1);
   }
 
-  router-view {
-    max-width: 600px;
+  .page_content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
   }
 </style>

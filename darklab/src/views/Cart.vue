@@ -1,7 +1,9 @@
 <template>
     <div>
         <Navbar class="navbar" />
-        <h1>This is the cart page</h1>
+        <div class="basket">
+          <h1>You have nothing in your cart.</h1>
+        </div>
     </div>
 </template>
 
@@ -17,5 +19,15 @@ export default {
 </script>
 
 <style scoped>
+.basket {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+}
 
+  @media screen and (min-width: 500px) {
+    h1 {
+      font-size: 26px;
+    }
+  }
 </style>

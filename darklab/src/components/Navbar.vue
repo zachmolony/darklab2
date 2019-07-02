@@ -1,9 +1,9 @@
 <template>
     <div class="navbar">
-        <router-link to="/home">
+        <router-link to="/">
             <img id="menu" src="../assets/skull.gif" alt="">
         </router-link>
-        <router-link to="/">
+        <router-link to="/home">
             <img id="logo" src="../assets/logo-rough.png" alt="">
         </router-link>
         <router-link to="/cart">
@@ -21,8 +21,10 @@ export default {
 <style scoped lang="sass">
 .navbar
     padding-top: 5vh
-    margin-left: 2vw
+    margin-left: auto -1vw
+    margin-right: auto
     width: 90vw
+    max-width: 450px
     display: flex
     justify-content: space-between
 
@@ -36,7 +38,20 @@ img
 
 #menu
     height: 40px
-    margin-right: -1vw
-    margin-left: 1vw
+    margin-right: -2vw
+    margin-left: 3vw
     margin-top: -5px
+
+@media screen and (max-width: 375px)
+    #logo
+        width: 53vw
+        height: auto
+    
+    #cart 
+        width: 9vw
+        height: auto
+    
+    #menu
+        width: 18vw
+        height: auto
 </style>
