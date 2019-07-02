@@ -10,7 +10,7 @@
                 <h1>{{item.title}}</h1>
                 <p>{{item.price}}</p>
               </div>
-              <p>x {{item.price}}</p>
+              <p>x {{item.quantity}}</p>
             </div>
           </div>
         </div>
