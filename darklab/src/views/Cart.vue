@@ -15,25 +15,40 @@ export default {
   components: {
     Navbar
   },
-  props: ['basket'],
   data() {
     return {
-      
+      basket: this.$store.state.cart
     }
   },
-  created() {
-    if (basket.length == 0) {
-      let basketIsEmpty = true;
-    }
-  }
 }
 </script>
-
+v-for="(item, index) in basket"
 <style scoped>
 .basket {
+  width: 80vw;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 500px;
+  max-width: 450px;
+  border: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: rgb(187, 187, 187);
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+}
+
+.product-img {
+  width: auto;
+  height: 20vw;
+  max-height: 100px;
 }
 
   @media screen and (min-width: 500px) {

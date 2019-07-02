@@ -32,5 +32,10 @@ export default new Vuex.Store({
               soldOut: true
             }
           ]
+    },
+    mutations: {
+        addToCart(state, item) {
+            state.cart.push(item);
+        }
     }
 })
