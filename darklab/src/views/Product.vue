@@ -9,7 +9,7 @@
                     <p>{{product.price}}</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, omnis corporis.</p>
                 </div>
-                <button @click="addToCart(product.id)">ADD TO CART</button>
+                <button @click="emitAddToCart">ADD TO CART</button>
             </div>
         </div>
     </div>
@@ -17,12 +17,14 @@
 
 <script>
 import Navbar from '../components/Navbar.vue'
+import { EventBus } from '../event-bus.js';
+
 export default {
     name: 'Product',
     components: {
         Navbar
     },
-    props: ['products'],
+    props: ['products', 'basket'],
     data() {
         return {
             product_Id: this.$route.params.Pid,
@@ -53,12 +55,10 @@ export default {
         }
     },
     methods: {
-        addToCart(id) {
-            console.log(id);
+        emitAddToCart() {
+            // Send the event on a channel (addToCart) with a payload (product_Id)
+            EventBus.$emit('addToCart', this.product_Id);
         }
-    },
-    created() {
-        console.log(typeof this.$route.params.Pid);
     }
 }
 </script>
@@ -88,7 +88,7 @@ button
     margin: 1em 0.3em 0.3em 0
     border-radius: 0.12em
     font-weight: 300
-    transition: color 0.4s
+    transition: color 0.8s
 
     &:active
         color:#000000

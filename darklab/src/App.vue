@@ -1,14 +1,37 @@
 <template>
-  <div id="app">
+  <div id="app" >
     <img id="background" src="./assets/sky.gif" alt="">
-    <router-view class="page_content" />
+    <router-view class="page_content" v-on:addToCart="addToCart(1)" />
   </div>
 </template>
 
 <script>
   import Navbar from './components/Navbar'
+  import { EventBus } from './event-bus.js';
+
+  var basket = [];
+
+  // Listen for the i-got-clicked event and its payload.
+  EventBus.$on('addToCart', product_Id => {
+    basket.push(Number(product_Id));
+    console.log(`Added product ID: ${product_Id} to basket.`)
+    console.log(basket);
+    window.basket = basket;
+  })
 
   export default {
+    data() {
+      return {
+        basket: []
+      }
+    },
+    methods: {
+        addToCart(id) {
+            console.log(id);
+            basket += id;
+            console.log(basket);
+        }
+    }
   }
 </script>
 
