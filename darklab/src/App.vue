@@ -48,4 +48,8 @@
     filter: grayscale(1);
     filter: invert(1);
   }
+
+  router-view {
+    max-width: 600px;
+  }
 </style>
