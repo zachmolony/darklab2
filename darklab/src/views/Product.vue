@@ -1,7 +1,7 @@
 <template>
     <div class="Product">
         <Navbar class="navbar" />
-        <div class="product-item" v-bind:key="product.id" v-for="product in products2">
+        <div class="product-item" v-bind:key="product.id" v-for="product in products">
             <div v-if="product_Id == product.id">
                 <img v-bind:src="product.img">
                 <div class="info-container">
@@ -24,34 +24,11 @@ export default {
     components: {
         Navbar
     },
-    props: ['products', 'basket'],
     data() {
         return {
             product_Id: this.$route.params.Pid,
             title: "product",
-            products2: [
-                {
-                    id: 1,
-                    img: 'https://firebasestorage.googleapis.com/v0/b/darklab2037.appspot.com/o/Hoodie_Green.png?alt=media&token=88434e76-11b4-4f12-ae73-a4d1682ddcb8',
-                    title: "Skull Hoodie",
-                    price: '£xx.xx',
-                    soldOut: false
-                },
-                {
-                    id: 2,
-                    img: 'https://firebasestorage.googleapis.com/v0/b/darklab2037.appspot.com/o/Jeans_1.png?alt=media&token=a7620aa5-c312-433f-bf91-1ea04cbe79da',
-                    title: "Dark Denim",
-                    price: '£xx.xx',
-                    soldOut: false
-                },
-                {
-                    id: 3,
-                    img: '',
-                    title: "Butterfly Hoodie",
-                    price: '£xx.xx',
-                    soldOut: true
-                }
-            ]
+            products: this.$store.state.products
         }
     },
     methods: {

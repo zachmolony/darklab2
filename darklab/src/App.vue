@@ -16,7 +16,6 @@
     basket.push(Number(product_Id));
     console.log(`Added product ID: ${product_Id} to basket.`)
     console.log(basket);
-    window.basket = basket;
   })
 
   export default {
