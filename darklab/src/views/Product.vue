@@ -9,6 +9,7 @@
                     <p>{{product.price}}</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, omnis corporis.</p>
                 </div>
+                <button @click="addToCart(product.id)">ADD TO CART</button>
             </div>
         </div>
     </div>
@@ -51,6 +52,11 @@ export default {
             ]
         }
     },
+    methods: {
+        addToCart(id) {
+            console.log(id);
+        }
+    },
     created() {
         console.log(typeof this.$route.params.Pid);
     }
@@ -73,15 +79,29 @@ img
     text-decoration: line-through
 
 button 
-    margin-top: 10%
-    margin-left: 15%
     color: white
-    float: right
-    max-height: 3em
-    width: 35%
-    background-color: rgba(255, 0, 0, 0.76)
+    width: 35vh
+    height: 3em
+    background-color: rgba(255, 0, 0)
+    display: inline-block
+    padding: 0.35em 1.2em
+    margin: 1em 0.3em 0.3em 0
+    border-radius: 0.12em
+    font-weight: 300
+    transition: color 0.4s
+
+    &:active
+        color:#000000
+        background-color:#FFFFFF
 
 .info-container 
     display: flex
     flex-direction: column
+    margin-left: auto
+    margin-right: auto
+    max-width: 40vh
+    
+    * 
+        margin-bottom: 10px
+
 </style>

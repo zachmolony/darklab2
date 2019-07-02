@@ -1,7 +1,7 @@
 <template>
   <div id="Home">
     <Navbar class="navbar" />
-    <Products  v-bind:products="products" v-on:addToCart="addToCart"/>
+    <Products  v-bind:products="products"/>
   </div>
 </template>
 

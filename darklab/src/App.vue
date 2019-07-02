@@ -31,6 +31,12 @@
     font-size: 5vw;
   }
 
+  @media screen and (min-width: 700px) {
+    h1 {
+      font-size: 36px;
+    }
+  }
+
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
