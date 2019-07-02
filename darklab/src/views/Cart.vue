@@ -11,6 +11,7 @@
                 <p>{{item.price}}</p>
               </div>
               <p>x {{item.quantity}}</p>
+              <span @click="$store.commit('removeFromCart', item)">X</span>
             </div>
           </div>
         </div>

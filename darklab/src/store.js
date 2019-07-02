@@ -45,6 +45,11 @@ export default new Vuex.Store({
             };
             this.commit('cartPersistence');
         },
+        removeFromCart(state, item) {
+            let index = state.cart.indexOf(item);
+            state.cart.splice(index, 1);
+            this.commit('cartPersistence');
+        },
         cartPersistence(state) {
             window.localStorage.setItem('cart', JSON.stringify(state.cart));
         }
