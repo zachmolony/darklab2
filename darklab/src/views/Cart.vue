@@ -9,12 +9,19 @@
               <div class="details">
                 <h1>{{item.title}}</h1>
                 <p>{{item.price}}</p>
-                <p>x {{item.quantity}}</p>
+                <form>
+                  <div class="value-button" id="decrease" @click="decreaseQuantity(item)">-</div>
+                  <input type="number" id="number" v-bind:value="item.quantity" />
+                  <div class="value-button" id="increase" @click="increaseQuantity(item)">+</div>
+              </form>
               </div>
-              <span @click="$store.commit('removeFromCart', item)">X</span>
+              <div class="edit">
+                <span @click="$store.commit('removeFromCart', item)"><img src="https://image.flaticon.com/icons/svg/61/61848.svg" alt=""></span>
+              
+              </div>
             </div>
           </div>
-          <h1 @click="getBasketTotal">Total: {{ getBasketTotal() }} </h1>
+          <h1 class="total" @click="getBasketTotal">Total: {{ getBasketTotal() }} </h1>
         </div>
     </div>
 </template>
@@ -28,14 +35,20 @@ export default {
     Navbar
   },
   methods: {
+    increaseQuantity(item) {
+      this.$store.commit('increaseQuantity', item);
+    },
+    decreaseQuantity(item) {
+      this.$store.commit('decreaseQuantity', item);
+    },
     getBasketTotal() {
       let cart = this.$store.state.cart;
       // console.log(this.$store.state.cart.reduce((a, b) => ({a: a + (b.price * b.quantity)}, 0)));
       let total = 0;
       for (var i = 0; i< cart.length; i++) {
-        total += cart[i].quantity * cart[i].price;
+        total += (cart[i].quantity * cart[i].price);
       };
-      return total;
+      return Math.round(total * 100) / 100;
     }
   },
   data() {
@@ -66,6 +79,7 @@ p {
   border-radius: 5px;
   border-color: rgb(187, 187, 187);
   padding: 15px;
+  background-color: #ffffff85;
 }
 
 .item-container {
@@ -87,16 +101,76 @@ p {
 .details {
   text-align: left;
   margin-top: -15px;
-  margin-left: -5px;
+  width: 100%;
+  padding-left: 15px;
 }
 
 .details p {
   margin: 0;
 }
 
+.total {
+  text-align: right;
+}
+
+span img {
+  margin-top: -15px;
+  height: 16px;
+}
+
+.edit {
+  justify-content: flex-end;
+}
+
+.edit > * {
+  float: right;
+}
+
+form {
+  width: 100px;
+  transform: translateX(-25px);
+  text-align: center;
+  padding-top: 20px;
+}
+
+.value-button {
+  display: inline-block;
+  margin: 0px;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.value-button:hover {
+  cursor: pointer;
+}
+
+form #decrease {
+  margin-right: -4px;
+  border-radius: 8px 0 0 8px;
+}
+
+form #increase {
+  margin-left: -4px;
+  border-radius: 0 8px 8px 0;
+}
+
+input#number {
+  text-align: center;
+  margin: 0px;
+  width: 20px;
+  height: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
   @media screen and (min-width: 500px) {
     h1 {
-      font-size: 26px;
+      font-size: 22px;
     }
     .product-img {
       width: auto;
@@ -104,7 +178,7 @@ p {
     }
     .details {
       margin-top: -20px;
-      margin-left: -80px;
+      margin-left: 10px;
     }
   }
 </style>

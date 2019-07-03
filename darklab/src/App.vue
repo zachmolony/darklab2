@@ -34,7 +34,7 @@
 
   @media screen and (min-width: 700px) {
     h1 {
-      font-size: 36px;
+      font-size: 32px;
     }
   }
 
