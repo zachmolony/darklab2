@@ -13,7 +13,7 @@ export default new Vuex.Store({
               id: 1,
               img: 'https://firebasestorage.googleapis.com/v0/b/darklab2037.appspot.com/o/Hoodie_Green.png?alt=media&token=88434e76-11b4-4f12-ae73-a4d1682ddcb8',
               title: "Skull Hoodie",
-              price: 69.99,
+              price: 39.99,
               soldOut: false,
               quantity: 1
             },
@@ -43,6 +43,16 @@ export default new Vuex.Store({
             } else {
                 state.cart.push(item);
             };
+            this.commit('cartPersistence');
+        },
+        increaseQuantity(state, item) {
+            console.log("added one to product");
+            state.cart.find(product => product.id == item.id).quantity++;
+            this.commit('cartPersistence');
+        },
+        decreaseQuantity(state, item) {
+            console.log("added one to product");
+            state.cart.find(product => product.id == item.id).quantity--;
             this.commit('cartPersistence');
         },
         removeFromCart(state, item) {
