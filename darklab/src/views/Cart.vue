@@ -9,11 +9,12 @@
               <div class="details">
                 <h1>{{item.title}}</h1>
                 <p>{{item.price}}</p>
+                <p>x {{item.quantity}}</p>
               </div>
-              <p>x {{item.quantity}}</p>
               <span @click="$store.commit('removeFromCart', item)">X</span>
             </div>
           </div>
+          <h1 @click="getBasketTotal">Total: {{ getBasketTotal() }} </h1>
         </div>
     </div>
 </template>
@@ -26,17 +27,32 @@ export default {
   components: {
     Navbar
   },
-  data() {
-    return {
-      basket: this.$store.state.cart
+  methods: {
+    getBasketTotal() {
+      let cart = this.$store.state.cart;
+      // console.log(this.$store.state.cart.reduce((a, b) => ({a: a + (b.price * b.quantity)}, 0)));
+      let total = 0;
+      for (var i = 0; i< cart.length; i++) {
+        total += cart[i].quantity * cart[i].price;
+      };
+      return total;
     }
   },
+  data() {
+    return {
+      basket: this.$store.state.cart,
+    }
+  }
 }
 </script>
-v-for="(item, index) in basket"
+
 <style scoped>
 h1 {
-  font-size: 1em;
+  font-size: 0.9em;
+}
+
+p {
+  font-size: 0.9em;
 }
 
 .basket {
@@ -71,7 +87,11 @@ h1 {
 .details {
   text-align: left;
   margin-top: -15px;
-  margin-left: -30px;
+  margin-left: -5px;
+}
+
+.details p {
+  margin: 0;
 }
 
   @media screen and (min-width: 500px) {
