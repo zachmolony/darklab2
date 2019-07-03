@@ -26,6 +26,7 @@
 
   body {
     margin: 0;
+    background-color: #fefef4;
   }
 
   h1 {
