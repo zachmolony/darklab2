@@ -2,8 +2,7 @@
     <div>
         <Navbar class="navbar" />
         <div class="basket">
-          <h1 v-if="basket.length == 0">You have nothing in your cart.</h1>
-          <div class="item-container" v-else :key="index" v-for="(item, index) in basket">
+          <div class="item-container" v-else :key="index" v-for="(item, index) in basket" v-if="item.quantity > 0">
             <div class="item">
               <img class="product-img" v-bind:src="item.img">
               <div class="details">
