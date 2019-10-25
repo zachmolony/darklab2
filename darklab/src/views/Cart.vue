@@ -41,12 +41,7 @@ export default {
       this.$store.commit('decreaseQuantity', item);
     },
     getBasketTotal() {
-      let cart = this.$store.state.cart;
-      // console.log(this.$store.state.cart.reduce((a, b) => ({a: a + (b.price * b.quantity)}, 0)));
-      let total = 0;
-      for (var i = 0; i< cart.length; i++) {
-        total += (cart[i].quantity * cart[i].price);
-      };
+      let total = this.$store.state.cart.reduce((a,b) => a  + (b.price * b.quantity), 0)
       return Math.round(total * 100) / 100;
     }
   },
@@ -159,6 +154,7 @@ input#number {
   margin: 0px;
   width: 20px;
   height: 20px;
+  background-color: transparent;
 }
 
 input[type=number]::-webkit-inner-spin-button,
