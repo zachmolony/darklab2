@@ -34,7 +34,7 @@ img
     width: auto
 
 #cart
-    padding:2px
+    padding: 2px
     margin-left: 3px
 
 #menu

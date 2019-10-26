@@ -1,0 +1,20 @@
+{
+  "name": "darklab3",
+  "version": "1.0.0",
+  "description": "++",
+  "author": "zachmolony",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "node-sass": "^4.13.0",
+    "nuxt": "^2.0.0",
+    "sass-loader": "^8.0.0",
+    "vuex": "^3.1.1"
+  },
+  "devDependencies": {}
+}

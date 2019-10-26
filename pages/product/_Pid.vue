@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Navbar from '../components/Navbar.vue'
+import Navbar from '../../components/Navbar.vue'
 
 export default {
     name: 'Product',
@@ -58,7 +58,7 @@ button
     color: white
     width: 35vh
     height: 3em
-    background-color: rgba(255, 0, 0)
+    background-color: #ff0000
     display: inline-block
     padding: 0.35em 1.2em
     margin: 1em 0.3em 0.3em 0
