@@ -1,11 +1,13 @@
 <template>
-    <div class="product-item" v-bind:class="{'soldOut':product.soldOut}" @click="goToProductPage(product.id)" >
-        <img v-bind:src="product.img">
-        <div class="info-container">
-            <h1>{{product.title}}</h1>
-            <p>{{product.price}}</p>
-        </div> 
-    </div>
+    <nuxt-link :to="'/product/' + product.id">
+        <div class="product-item" v-bind:class="{'soldOut':product.soldOut}">
+            <img v-bind:src="product.img">
+            <div class="info-container">
+                <h1>{{product.title}}</h1>
+                <p>{{product.price}}</p>
+            </div>
+        </div>
+    </nuxt-link>
 </template>
 
 <script>
