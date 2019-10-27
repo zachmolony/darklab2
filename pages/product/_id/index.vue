@@ -16,12 +16,20 @@
 </template>
 
 <script>
-import Navbar from '../../components/Navbar.vue'
+import Navbar from '../../../components/Navbar.vue'
 
 export default {
     name: 'Product',
     components: {
         Navbar
+    },
+    head() {
+      return {
+        title: "/{{}} DARK-LAB 2037+",
+        meta: {
+          tags: "dark lab darklab darklab2037 2037 dark-lab"
+        }
+      }
     },
     data() {
         return {
