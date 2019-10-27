@@ -1,55 +1,72 @@
 <template>
   <div>
-    <nuxt />
+    <div id="app">
+      <img id="background" src="../assets/sky.gif" alt="">
+      <nuxt />
+    </div>
   </div>
 </template>
 
+<script>
+  import {
+    Navbar
+  } from "../components/Navbar.vue";
+
+  export default {
+    components: {
+      Navbar
+    }
+  };
+
+</script>
+
 <style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-family: 'Scheherazade', serif;
+    color: black;
+  }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
+  body {
+    margin: 0;
+    background-color: #fefef4;
+  }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+  h1 {
+    font-size: 5vw;
+  }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+  @media screen and (min-width: 700px) {
+    h1 {
+      font-size: 32px;
+    }
+  }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    margin: 0 !important;
+  }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+  #background {
+    display: block;
+    position: fixed;
+    height: auto;
+    width: 100%;
+    z-index: -5;
+    filter: grayscale(1);
+    filter: invert(1);
+  }
+
+  .page_content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+  }
+
 </style>

@@ -5,9 +5,9 @@
                 <img src="../assets/skull.gif" alt="">
             </div>
             <img id="logo" src="../assets/logo-rough.png" alt="">
-            <router-link to="/home">
+            <nuxt-link to="/home">
                 <button class="enterButton">enter store.</button>
-            </router-link>
+            </nuxt-link>
         </div>
     </div>
 </template>
