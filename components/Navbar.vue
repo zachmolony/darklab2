@@ -1,14 +1,14 @@
 <template>
     <div class="navbar">
-        <router-link to="/">
+        <nuxt-link to="/">
             <img id="menu" src="../assets/skull.gif" alt="">
-        </router-link>
-        <router-link to="/home">
+        </nuxt-link>
+        <nuxt-link to="/home">
             <img id="logo" src="../assets/logo-rough.png" alt="">
-        </router-link>
-        <router-link to="/cart">
+        </nuxt-link>
+        <nuxt-link to="/cart">
             <img id="cart" src="../assets/carticon.png" alt="">
-        </router-link>
+        </nuxt-link>
     </div>
 </template>
 
@@ -22,10 +22,10 @@ export default {
 <style scoped lang="sass">
 .navbar
     padding-top: 5vh
-    margin-left: auto -1vw
+    margin-left: auto
     margin-right: auto
     width: 90vw
-    max-width: 450px
+    max-width: 420px
     display: flex
     justify-content: space-between
 
@@ -33,14 +33,15 @@ img
     height: 30px
     width: auto
 
+#logo 
+    margin-right: 10px
+
 #cart
     padding: 2px
     margin-left: 3px
 
 #menu
     height: 40px
-    margin-right: -2vw
-    margin-left: 3vw
     margin-top: -5px
 
 @media screen and (max-width: 375px)
