@@ -52,8 +52,12 @@ const createStore = () => {
         this.commit('cartPersistence');
       },
       decreaseQuantity(state, item) {
-        console.log("added one to product");
-        state.cart.find(product => product.id == item.id).quantity--;
+        let cartItem = state.cart.find(product => product.id == item.id)
+        if (cartItem.quantity < 1) {
+          cartItem.quantity--;
+        } else {
+          this.commit('removeFromCart');
+        }
         this.commit('cartPersistence');
       },
       removeFromCart(state, item) {
