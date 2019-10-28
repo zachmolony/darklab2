@@ -2,7 +2,7 @@
     <div class="Product">
         <Navbar class="navbar" />
         <div class="product-item" v-bind:key="product.id" v-for="product in products">
-            <div v-if="product_Id == product.id">
+            <div v-if="$route.params.id == product.id">
                 <img v-bind:src="product.img">
                 <div class="info-container">
                     <h1>{{product.title}}</h1>
@@ -20,6 +20,7 @@ import Navbar from '../../../components/Navbar.vue'
 
 export default {
     name: 'Product',
+    props: ['product'],
     components: {
         Navbar
     },
@@ -33,7 +34,6 @@ export default {
     },
     data() {
         return {
-            product_Id: this.$route.params.Pid,
             title: "product",
             products: this.$store.state.products
         }
