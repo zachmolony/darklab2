@@ -26,10 +26,7 @@ export default {
     },
     head() {
       return {
-        title: "/{{}} DARK-LAB 2037+",
-        meta: {
-          tags: "dark lab darklab darklab2037 2037 dark-lab"
-        }
+        title: "DARK-LAB 2037+"
       }
     },
     data() {
