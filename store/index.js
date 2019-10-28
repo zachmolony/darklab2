@@ -36,11 +36,12 @@ const createStore = () => {
       ]
     },
     mutations: {
-      addToCart(state, item) {
-        let found = state.cart.find(product => product.id == item.id);
+      addToCart(state, id) {
+        let found = state.cart.find(product => product && product.id == id);
         if (found) {
           found.quantity++;
         } else {
+          let item = state.products.find(product => product && product.id == id);
           state.cart.push(item);
         };
         this.commit('cartPersistence');

@@ -9,7 +9,7 @@
                     <p>{{product.price}}</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, omnis corporis.</p>
                 </div>
-                <button @click="addToCart">ADD TO CART</button>
+                <button @click="$store.commit('addToCart', $route.params.id)">ADD TO CART</button>
             </div>
         </div>
     </div>
@@ -36,12 +36,6 @@ export default {
         return {
             title: "product",
             products: this.$store.state.products
-        }
-    },
-    methods: {
-        addToCart() {
-            console.log(`Added product ID: ${this.$route.params.Pid} to basket.`)
-            this.$store.commit('addToCart', this.$store.state.products[this.$route.params.Pid - 1])
         }
     }
 }
