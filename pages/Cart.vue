@@ -2,7 +2,7 @@
     <div>
         <Navbar class="navbar" />
         <div class="basket">
-          <div class="item-container" v-else :key="index" v-for="(item, index) in basket" v-if="item.quantity > 0">
+          <div class="item-container" v-else :key="index" v-for="(item, index) in $store.state.cart" v-if="$store.state.cart.length > 0">
             <div class="item">
               <img class="product-img" v-bind:src="item.img">
               <div class="details">
@@ -43,11 +43,6 @@ export default {
     getBasketTotal() {
       let total = this.$store.state.cart.reduce((a,b) => a  + (b.price * b.quantity), 0)
       return Math.round(total * 100) / 100;
-    }
-  },
-  data() {
-    return {
-      basket: this.$store.state.cart,
     }
   }
 }
