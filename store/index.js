@@ -47,7 +47,6 @@ const createStore = () => {
         this.commit('cartPersistence');
       },
       increaseQuantity(state, item) {
-        console.log("added one to product");
         state.cart.find(product => product.id == item.id).quantity++;
         this.commit('cartPersistence');
       },
@@ -64,15 +63,6 @@ const createStore = () => {
         let index = state.cart.indexOf(item);
         state.cart.splice(index, 1);
         this.commit('cartPersistence');
-      },
-      calculateCartTotal(state) {
-        let cart = state.cart;
-        // console.log(this.$store.state.cart.reduce((a, b) => ({a: a + (b.price * b.quantity)}, 0)));
-        let total = 0;
-        for (var i = 0; i < cart.length; i++) {
-          total += (cart[i].quantity * cart[i].price);
-        };
-        return Math.round(total * 100) / 100;
       },
       cartPersistence(state) {
         window.localStorage.setItem('cart', JSON.stringify(state.cart));
