@@ -52,7 +52,7 @@ const createStore = () => {
       },
       decreaseQuantity(state, item) {
         let cartItem = state.cart.find(product => product.id == item.id)
-        if (cartItem.quantity < 1) {
+        if (cartItem.quantity > 1) {
           cartItem.quantity--;
         } else {
           this.commit('removeFromCart');
