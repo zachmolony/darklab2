@@ -16,7 +16,6 @@
               </div>
               <div class="edit">
                 <span @click="$store.commit('removeFromCart', item)"><img src="https://image.flaticon.com/icons/svg/61/61848.svg" alt=""></span>
-              
               </div>
             </div>
           </div>

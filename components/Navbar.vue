@@ -1,10 +1,7 @@
 <template>
     <div class="navbar">
-        <nuxt-link to="/">
+        <nuxt-link exact to="/">
             <img id="menu" src="../assets/skull.gif" alt="">
-        </nuxt-link>
-        <nuxt-link to="/home">
-            <img id="logo" src="../assets/logo-rough.png" alt="">
         </nuxt-link>
         <nuxt-link to="/cart">
             <img id="cart" src="../assets/carticon.png" alt="">

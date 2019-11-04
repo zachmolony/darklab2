@@ -1,6 +1,12 @@
 <template>
   <div>
     <div id="app">
+      <Navbar class="navbar" />
+      <div id="logoContainer">
+        <nuxt-link to="/home">
+          <img id="logo" src="../assets/logo-rough.png" alt="">
+        </nuxt-link>
+      </div>
       <img id="background" src="../assets/sky.gif" alt="">
       <nuxt />
     </div>
@@ -8,12 +14,15 @@
 </template>
 
 <script>
+import Navbar from '../components/Navbar.vue'
+import mapState from 'vuex'
+
   export default {
     head() {
       return {
         title: "DARK-LAB 2037+"
       }
-    }
+    },
   };
 
 </script>

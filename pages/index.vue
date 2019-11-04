@@ -4,7 +4,6 @@
             <div class="skull">
                 <img src="../assets/skull.gif" alt="">
             </div>
-            <img id="logo" src="../assets/logo-rough.png" alt="">
             <nuxt-link to="/home">
                 <button class="enterButton">enter store.</button>
             </nuxt-link>

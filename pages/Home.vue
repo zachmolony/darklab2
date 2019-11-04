@@ -1,6 +1,6 @@
 <template>
   <div id="Home">
-    <Navbar class="navbar" />
+    <Navbar/>
     <Products  v-bind:products="products"/>
   </div>
 </template>
