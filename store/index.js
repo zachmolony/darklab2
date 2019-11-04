@@ -8,6 +8,7 @@ let cart = window.localStorage.getItem('cart');
 const createStore = () => {
   return new Vuex.Store({
     state: {
+      page: 'index',
       cart: cart ? JSON.parse(cart) : [],
       products: [{
           id: 1,
@@ -36,6 +37,9 @@ const createStore = () => {
       ]
     },
     mutations: {
+      updatePage(state, pageName) {
+        state.page = pageName;
+      },
       addToCart(state, id) {
         let found = state.cart.find(product => product && product.id == id);
         if (found) {
