@@ -50,3 +50,9 @@ export default {
     }
   }
 }
+
+module.exports = {
+  router: {
+    middleware: 'pages'
+  }
+}
