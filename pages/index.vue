@@ -17,35 +17,31 @@ export default {
 }
 </script>
 
-<style scoped>
-  #header {
-    position: absolute;
-    padding-top: 28vh;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
+<style scoped lang="sass">
+#header
+  position: absolute
+  padding-top: 28vh
+  left: 0
+  right: 0
+  margin-left: auto
+  margin-right: auto
+  max-width: 300px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  overflow: hidden
 
-  .skull * {
-    max-width: 130px;
-    padding-bottom: 2vh;
-  }
-  
-#logo {
-    height: 30px;
-    width: auto;
-}
+.skull *
+  max-width: 130px
+  padding-bottom: 2vh
 
-.enterButton {
-    margin-top: 4vh;
-    background-color: transparent;
-    color: red;
-}
+#logo
+  height: 30px
+  width: auto
+
+.enterButton
+  margin-top: 4vh
+  background-color: transparent
+  color: red
 </style>

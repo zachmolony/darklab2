@@ -27,53 +27,61 @@ import mapState from 'vuex'
 
 </script>
 
-<style>
-  * {
-    box-sizing: border-box;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-family: 'Scheherazade', serif;
-    color: black;
-  }
+<style lang="sass">
+*
+  box-sizing: border-box
+  padding: 0
+  border: 0
+  outline: 0
+  font-family: 'Scheherazade', serif
+  color: black
 
-  body {
-    margin: 0;
-    background-color: #fefef4;
-  }
+body
+  margin: 0
+  background-color: #fefef4
 
-  h1 {
-    font-size: 5vw;
-  }
+h1
+  font-size: 5vw
 
-  @media screen and (min-width: 700px) {
-    h1 {
-      font-size: 32px;
-    }
-  }
+@media screen and (min-width: 700px)
+  h1
+    font-size: 32px
 
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    margin: 0 !important;
-  }
+#app
+  font-family: 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-align: center
+  margin: 0 !important
 
-  #background {
-    display: block;
-    position: fixed;
-    height: auto;
-    width: 100%;
-    z-index: -5;
-    filter: grayscale(1);
-    filter: invert(1);
-  }
+#background
+  display: block
+  position: fixed
+  height: auto
+  width: 100%
+  z-index: -5
+  filter: grayscale(1)
+  filter: invert(1)
 
-  .page_content {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 500px;
-  }
+.page_content
+  margin-left: auto
+  margin-right: auto
+  max-width: 500px
 
+  /* NAVBAR */
+
+#logoContainer
+  padding-top: 5vh
+  width: 50vw
+  position: absolute
+  left: 25%
+
+#logo
+    margin: 0 auto
+    height: 30px
+
+@media screen and (max-width: 375px)
+    #logo
+        width: 53vw
+        height: auto
 </style>
