@@ -1,5 +1,8 @@
 
 export default {
+  router: {
+    middleware: 'pages'
+  },
   mode: 'spa',
   /*
   ** Headers of the page
@@ -48,11 +51,5 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
-}
-
-module.exports = {
-  router: {
-    middleware: 'pages'
   }
 }
