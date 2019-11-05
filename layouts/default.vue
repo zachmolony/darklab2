@@ -4,7 +4,9 @@
       <Navbar class="navbar" />
       <div id="logoContainer">
         <nuxt-link to="/home">
-          <img id="logo" src="../assets/logo-rough.png" alt="">
+        <transition>
+          <img id="logo" :class="{ 'active' : ($store.state.page === 'index') }" src="../assets/logo-rough.png" alt="">
+        </transition>
         </nuxt-link>
       </div>
       <img id="background" src="../assets/sky.gif" alt="">
@@ -15,14 +17,13 @@
 
 <script>
 import Navbar from '../components/Navbar.vue'
-import mapState from 'vuex'
 
   export default {
     head() {
       return {
         title: "DARK-LAB 2037+"
       }
-    },
+    }
   };
 
 </script>
@@ -79,6 +80,19 @@ h1
 #logo
     margin: 0 auto
     height: 30px
+
+.active
+  transform: translateY(37vh)
+
+.page-enter-active 
+  transition: opacity 0.25s ease-out
+
+.page-leave-active 
+  transition: opacity 0.25s ease-in
+
+.page-enter .page-leave-active 
+  opacity: 0
+
 
 @media screen and (max-width: 375px)
     #logo

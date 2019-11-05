@@ -12,8 +12,9 @@
 </template>
 
 <script>
+
 export default {
-    name: 'Enter'
+    name: 'index',
 }
 </script>
 
@@ -34,7 +35,7 @@ export default {
 
 .skull *
   max-width: 130px
-  padding-bottom: 2vh
+  padding-bottom: 5vh
 
 #logo
   height: 30px
@@ -43,5 +44,5 @@ export default {
 .enterButton
   margin-top: 4vh
   background-color: transparent
-  color: red
+  color: red;
 </style>
