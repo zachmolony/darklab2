@@ -4,8 +4,8 @@
       <img id="background" src="../assets/sky.gif" alt="">
       <div id="logoContainer">
         <nuxt-link to="/home">
-        <transition>
-          <img id="logo" :class="{ 'active' : ($store.state.page === 'index') }" src="../assets/logo-rough.png" alt="">
+        <transition name="active">
+          <img id="logo" :class="{ 'active' : ($store.state.page !== 'index') }" src="../assets/logo-rough.png" alt="">
         </transition>
         </nuxt-link>
       </div>
@@ -88,13 +88,14 @@ h1
     height: 30px
 
 .active
-  transform: translateY(37vh)
+    transform: translate3d(0, -37vh, 0)
+    transition-duration: 1000ms
 
 .page-enter-active 
-  transition: opacity 0.25s ease-out
+  transition: opacity 1000ms ease-out
 
 .page-leave-active 
-  transition: opacity 0.25s ease-in
+  transition: opacity 1000ms ease-in
 
 .page-enter .page-leave-active 
   opacity: 0
