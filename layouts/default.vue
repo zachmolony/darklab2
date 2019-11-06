@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="app">
-      <Navbar class="navbar" />
+      <img id="background" src="../assets/sky.gif" alt="">
       <div id="logoContainer">
         <nuxt-link to="/home">
         <transition>
@@ -9,7 +9,6 @@
         </transition>
         </nuxt-link>
       </div>
-      <img id="background" src="../assets/sky.gif" alt="">
       <nuxt />
     </div>
   </div>
@@ -19,6 +18,9 @@
 import Navbar from '../components/Navbar.vue'
 
   export default {
+    components: {
+      Navbar
+    },
     head() {
       return {
         title: "DARK-LAB 2037+"
@@ -71,6 +73,9 @@ h1
 
   /* NAVBAR */
 
+.navbar
+  display: none
+
 #logoContainer
   padding-top: 5vh
   width: 50vw
@@ -79,6 +84,7 @@ h1
 
 #logo
     margin: 0 auto
+    margin-top: 37vh
     height: 30px
 
 .active
