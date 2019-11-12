@@ -2,14 +2,12 @@
   <div>
     <div id="app">
       <img id="background" src="../assets/sky.gif" alt="">
-      <div id="logoContainer">
-        <nuxt-link to="/home">
-        <transition name="active">
-          <img id="logo" :class="{ 'active' : ($store.state.page !== 'index') }" src="../assets/logo-rough.png" alt="">
-        </transition>
-        </nuxt-link>
-      </div>
-      <nuxt />
+        <div id="logoContainer" >
+          <nuxt-link to="/home">
+              <img id="logo" :class="{ 'active' : ($store.state.page !== 'index') }" src="../assets/logo-rough.png" alt="">
+          </nuxt-link>
+        </div>
+        <nuxt />
     </div>
   </div>
 </template>
@@ -31,6 +29,20 @@ import Navbar from '../components/Navbar.vue'
 </script>
 
 <style lang="sass">
+.page-leave-active
+  transition: all .30s ease-out
+
+.page-enter-active 
+  transition: all .30s ease-out
+
+.page-enter
+  opacity: 0
+  transform-origin: 50% 50%
+
+.page-leave-active
+  opacity: 0
+  transform-origin: 50% 50%
+
 *
   box-sizing: border-box
   padding: 0
@@ -38,6 +50,7 @@ import Navbar from '../components/Navbar.vue'
   outline: 0
   font-family: 'Scheherazade', serif
   color: black
+  text-decoration: none
 
 body
   margin: 0
@@ -88,18 +101,10 @@ h1
     height: 30px
 
 .active
-    transform: translate3d(0, -37vh, 0)
-    transition-duration: 1000ms
-
-.page-enter-active 
-  transition: opacity 1000ms ease-out
-
-.page-leave-active 
-  transition: opacity 1000ms ease-in
-
-.page-enter .page-leave-active 
-  opacity: 0
-
+  transform: translate3d(0, -37vh, 0)
+  transition-timing-function: cubic-bezier(0, 0, 0.49, 1.01)
+  transition-delay: 1000ms
+  transition-duration: 900ms
 
 @media screen and (max-width: 375px)
     #logo

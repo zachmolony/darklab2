@@ -1,24 +1,37 @@
 <template>
     <div>
-        <div id="header">
-            <div class="skull">
-                <img src="../assets/skull.gif" alt="">
-            </div>
-            <nuxt-link to="/home">
-                <button class="enterButton">enter store.</button>
-            </nuxt-link>
+      <div id="header">
+        <div class="skull">
+          <img src="../assets/skull.gif" alt="">
         </div>
+        <nuxt-link to="/home">
+          <button class="enterButton">enter store.</button>
+        </nuxt-link>
+      </div>
     </div>
 </template>
 
 <script>
-
 export default {
-    name: 'index',
+    name: 'index'
 }
 </script>
 
 <style scoped lang="sass">
+.page-leave-active
+  transition: all 600ms ease-out 100ms
+
+.page-enter-active 
+  transition: all 600ms ease-out
+
+.page-enter
+  opacity: 0
+  transform-origin: 50% 50%
+
+.page-leave-active
+  opacity: 0
+  transform-origin: 50% 50%
+
 #header
   position: absolute
   padding-top: 28vh
@@ -44,5 +57,5 @@ export default {
 .enterButton
   margin-top: 4vh
   background-color: transparent
-  color: red;
+  color: red
 </style>

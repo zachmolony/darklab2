@@ -30,6 +30,7 @@ export default {
 }
 </script>
 
-<style <style lang="scss" scoped>
-
+<style <style lang="sass" scoped>
+.page-enter-active
+  transition-delay: 850ms
 </style>
