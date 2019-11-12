@@ -90,15 +90,18 @@ h1
   display: none
 
 #logoContainer
+  pointer-events: none  
   padding-top: 5vh
   width: 50vw
   position: absolute
   left: 25%
 
 #logo
-    margin: 0 auto
-    margin-top: 37vh
-    height: 30px
+  z-index: 2
+  pointer-events: all
+  margin: 0 auto
+  margin-top: 37vh
+  height: 30px
 
 .active
   transform: translate3d(0, -37vh, 0)

@@ -43,7 +43,6 @@ export default {
     padding: 3vh
 
 img
-    z-index: -1
     display: block
     height: auto
     width: auto
