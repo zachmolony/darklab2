@@ -1,6 +1,11 @@
-# darklab3
+# Dark-Lab2037++ 
 
-> ++
+Dark-Lab Clothing full stack website rewrite
+
+## Built With
+
+- Nuxt
+- Sass
 
 ## Build Setup
 
