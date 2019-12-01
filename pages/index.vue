@@ -2,7 +2,6 @@
     <div>
       <div id="header">
         <div class="skull">
-          <img src="../assets/skull.gif" alt="">
         </div>
         <nuxt-link to="/home">
           <button class="enterButton">enter store.</button>
@@ -55,7 +54,7 @@ export default {
   width: auto
 
 .enterButton
-  margin-top: 4vh
+  margin-top: 20vh
   background-color: transparent
   color: red
 </style>
