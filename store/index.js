@@ -12,26 +12,18 @@ const createStore = () => {
       cart: cart ? JSON.parse(cart) : [],
       products: [{
           id: 1,
-          img: 'https://firebasestorage.googleapis.com/v0/b/darklab2037.appspot.com/o/Hoodie_Green.png?alt=media&token=88434e76-11b4-4f12-ae73-a4d1682ddcb8',
-          title: "Skull Hoodie",
+          img: 'https://firebasestorage.googleapis.com/v0/b/outer-limits-200b9.appspot.com/o/monster_hoodie.png?alt=media&token=c061e8fe-aace-4f89-b681-e8d625827012',
+          title: "Monster Hoodie",
           price: 39.99,
           soldOut: false,
           quantity: 1
         },
         {
           id: 2,
-          img: 'https://firebasestorage.googleapis.com/v0/b/darklab2037.appspot.com/o/Jeans_1.png?alt=media&token=a7620aa5-c312-433f-bf91-1ea04cbe79da',
-          title: "Dark Denim",
+          img: 'https://firebasestorage.googleapis.com/v0/b/outer-limits-200b9.appspot.com/o/metal_denim.png?alt=media&token=342fca5c-d29e-43d1-90b9-247cea839f20',
+          title: "Metal Denim",
           price: 69.99,
           soldOut: false,
-          quantity: 1
-        },
-        {
-          id: 3,
-          img: '',
-          title: "Butterfly Hoodie",
-          price: 69.99,
-          soldOut: true,
           quantity: 1
         }
       ]
