@@ -1,7 +1,7 @@
 <template>
     <div class="navbar">
         <nuxt-link exact to="/">
-            <img id="menu" src="../assets/skull.gif" alt="">
+            <img id="menu" src="../assets/stars.gif" alt="">
         </nuxt-link>
         <nuxt-link to="/cart">
             <img id="cart" src="../assets/carticon.png" alt="">
@@ -36,6 +36,7 @@ img
 #cart
     padding: 2px
     margin-left: 3px
+    filter: invert(1)
 
 #menu
     height: 40px

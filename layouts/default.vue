@@ -1,10 +1,10 @@
 <template>
   <div>
     <div id="app">
-      <img id="background" src="../assets/sky.gif" alt="">
+      <img id="background" src="../assets/b6.gif" alt="">
         <div id="logoContainer" >
           <nuxt-link to="/home">
-              <img id="logo" :class="{ 'active' : ($store.state.page !== 'index') }" src="../assets/logo-rough.png" alt="">
+              <img id="logo" :class="{ 'active' : ($store.state.page !== 'index') }" src="../assets/3d-logo.png" alt="">
           </nuxt-link>
         </div>
         <nuxt />
@@ -49,12 +49,13 @@ import Navbar from '../components/Navbar.vue'
   border: 0
   outline: 0
   font-family: 'Scheherazade', serif
-  color: black
+  color: white
   text-decoration: none
+
 
 body
   margin: 0
-  background-color: #fefef4
+  background-color: black
 
 h1
   font-size: 5vw
@@ -73,11 +74,15 @@ h1
 #background
   display: block
   position: fixed
-  height: auto
-  width: 100%
+  min-height: 100%
+  min-width: 100%
   z-index: -5
-  filter: grayscale(1)
-  filter: invert(1)
+  margin-left: auto
+  margin-right: auto
+
+@media (max-width: 700px)
+  #background
+    margin-left: -80% !important
 
 .page_content
   margin-left: auto
@@ -100,11 +105,11 @@ h1
   z-index: 2
   pointer-events: all
   margin: 0 auto
-  margin-top: 37vh
-  height: 30px
+  margin-top: 33vh
+  height: 60px
 
 .active
-  transform: translate3d(0, -37vh, 0)
+  transform: translate3d(0, -34vh, 0)
   transition-timing-function: cubic-bezier(0, 0, 0.49, 1.01)
   transition-delay: 1000ms
   transition-duration: 900ms
