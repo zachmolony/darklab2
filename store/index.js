@@ -16,7 +16,8 @@ const createStore = () => {
           title: "Monster Hoodie",
           price: 39.99,
           soldOut: false,
-          quantity: 1
+          quantity: 1,
+          desc: "• Wasteman Retardant"
         },
         {
           id: 2,
@@ -24,7 +25,8 @@ const createStore = () => {
           title: "Metal Denim",
           price: 69.99,
           soldOut: false,
-          quantity: 1
+          quantity: 1,
+          desc: `• Oooh im cool i got jeans on\n• Fuck you`
         }
       ]
     },
