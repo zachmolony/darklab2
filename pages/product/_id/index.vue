@@ -7,7 +7,7 @@
                 <div class="info-container">
                     <h1>{{product.title}}</h1>
                     <p>{{product.price}}</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, omnis corporis.</p>
+                    <p class="desc"><pre>{{product.desc}}</pre></p>
                 </div>
                 <button @click="$store.commit('addToCart', $route.params.id)">ADD TO CART</button>
             </div>
@@ -77,6 +77,10 @@ button
     max-width: 40vh
     
     * 
-        margin-bottom: 10px
+        margin-bottom: 0
+
+.desc
+    text-align: left
+    padding-bottom: 10px
 
 </style>
