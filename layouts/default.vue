@@ -18,10 +18,10 @@ import Navbar from '../components/Navbar.vue'
   export default {
     components: {
       Navbar
-    },
+    }, 
     head() {
       return {
-        title: "DARK-LAB 2037+"
+        title: "☬ Outer Limits ☬"
       }
     }
   };
@@ -29,6 +29,8 @@ import Navbar from '../components/Navbar.vue'
 </script>
 
 <style lang="sass">
+@import url('https://fonts.googleapis.com/css?family=Gupter&display=swap')
+
 .page-leave-active
   transition: all .30s ease-out
 
@@ -48,7 +50,7 @@ import Navbar from '../components/Navbar.vue'
   padding: 0
   border: 0
   outline: 0
-  font-family: 'Scheherazade', serif
+  font-family: 'Gupter', serif
   color: white
   text-decoration: none
 

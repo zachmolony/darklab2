@@ -4,7 +4,7 @@
         <div class="skull">
         </div>
         <nuxt-link to="/home">
-          <button class="enterButton">enter store.</button>
+          <button class="enterButton">coming soon</button>
         </nuxt-link>
       </div>
     </div>
