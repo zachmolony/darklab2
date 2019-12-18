@@ -113,4 +113,13 @@ h1
     #logo
         width: 53vw
         height: auto
+
+@media screen and (min-height: 800px)
+    #logo
+      margin-top: 36vh
+
+@media screen and (max-height: 630px)
+    #logo
+      margin-top: 40vh
+
 </style>
