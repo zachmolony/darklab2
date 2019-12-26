@@ -3,26 +3,31 @@
         <Navbar class="navbar" />
         <div class="product-item" v-bind:key="product.id" v-for="product in products">
             <div v-if="$route.params.id == product.id">
-                <img v-bind:src="product.img">
+                <Carousel :perPage=1>
+                    <Slide :key="image.img" v-for="image in product.imgs">
+                        <img v-bind:src="image.src">
+                    </Slide>
+                </Carousel>
                 <div class="info-container">
                     <h1>{{product.title}}</h1>
-                    <p>{{product.price}}</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, omnis corporis.</p>
                 </div>
                 <button @click="$store.commit('addToCart', $route.params.id)">ADD TO CART</button>
             </div>
         </div>
     </div>
-</template>
+</template> 
 
 <script>
 import Navbar from '../../../components/Navbar.vue'
+import { Carousel, Slide } from 'vue-carousel'
 
 export default {
     name: 'Product',
     props: ['product'],
     components: {
-        Navbar
+        Navbar,
+        Carousel,
+        Slide
     },
     head() {
       return {
@@ -42,7 +47,7 @@ export default {
 .product-item 
     padding: 3vh
 
-img
+carousel
     display: block
     height: auto
     width: auto
@@ -79,4 +84,7 @@ button
     * 
         margin-bottom: 10px
 
+@media screen and (max-width: 375px)
+    img
+        width: 100%
 </style>

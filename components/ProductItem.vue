@@ -1,7 +1,12 @@
 <template>
     <nuxt-link :to="'/product/' + product.id">
         <div class="product-item" v-bind:class="{'soldOut':product.soldOut}">
-            <img v-bind:src="product.img">
+            <carousel :perPage=1>
+                    <slide :key="image.img" v-for="image in product.imgs">
+                        <img v-bind:src="image.src">
+                        <img class="pImg" src="../assets/items/hood.png" alt="">
+                    </slide>
+                </carousel>
             <div class="info-container">
                 <h1>{{product.title}}</h1>
                 <p>{{product.price}}</p>
@@ -11,9 +16,15 @@
 </template>
 
 <script>
+import { Carousel, Slide } from 'vue-carousel'
+
 export default {
     name: "ProductItem",
     props: ["product"],
+    components: {
+        Carousel,
+        Slide        
+    },
     methods: {
         goToProductPage(productId) {
             this.$router.push({name:'product',params:{Pid:productId}})
@@ -50,4 +61,6 @@ button
     display: flex
     flex-direction: column
 
+.pImg
+    width: 100%
 </style>
