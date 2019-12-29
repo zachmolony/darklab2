@@ -33,4 +33,10 @@ export default {
 <style <style lang="sass" scoped>
 .page-enter-active
   transition-delay: 850ms
+  transition-duration: 600ms
+  transition-timing-function: ease-in
+
+.page-leave-active
+  transition-duration: 600ms
+  transition-timing-function: ease-in
 </style>

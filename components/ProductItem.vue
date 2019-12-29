@@ -4,7 +4,6 @@
             <img v-bind:src="product.img">
             <div class="info-container">
                 <h1>{{product.title}}</h1>
-                <p>{{product.price}}</p>
             </div>
         </div>
     </nuxt-link>
@@ -24,7 +23,7 @@ export default {
 
 <style lang="sass" scoped>
 .product-item 
-    padding: 3vh
+    padding: 10px
 
 .product-item >  *
     display: block

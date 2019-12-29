@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="app">
-      <img id="background" src="../assets/b6.gif" alt="">
+      <img id="background" src="../assets/b3.gif" alt="">
         <div id="logoContainer" >
           <nuxt-link to="/home">
               <img id="logo" :class="{ 'active' : ($store.state.page !== 'index') }" src="../assets/3d-logo.png" alt="">
@@ -21,7 +21,7 @@ import Navbar from '../components/Navbar.vue'
     }, 
     head() {
       return {
-        title: "☬ Outer Limits ☬"
+        title: "☬ CAIRO LOST-HILLS | Outer Limits ☬"
       }
     }
   };
@@ -112,7 +112,7 @@ h1
 
 .active
   transform: translate3d(0, -34vh, 0)
-  transition-timing-function: cubic-bezier(0, 0, 0.49, 1.01)
+  transition-timing-function: cubic-bezier(0.57, 0.09, 0.38, 1)
   transition-delay: 1000ms
   transition-duration: 900ms
 
